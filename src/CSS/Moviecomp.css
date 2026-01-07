@@ -1,0 +1,15 @@
+.PK{
+    height: 100%;
+    width: 500px;
+}
+img{
+max-width: 500px;
+height: 350px;
+border: 1px solid #383232;
+ border-radius: 5px;
+ box-shadow: 10px 10px 5px #aaaaaa;
+}
+.DisplyContent{
+    display: flex;
+    justify-content: space-evenly;
+}

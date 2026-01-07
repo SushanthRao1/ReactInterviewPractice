@@ -1,0 +1,15 @@
+especially React and JavaScript.
+Some of the questions asked:
+Difference between useEffect and useLayoutEffect
+How does Redux work internally?
+How do you share data globally in React?
+What is React Suspense and where is it used?
+How do you optimize a React application?
+Difference between debouncing and throttling
+Event bubbling vs event capturing
+Difference between setTimeout and setInterval
+Inline vs block elements
+JavaScript coding questions:
+Reverse a string
+Check if a string/sentence is a palindrome
+Count character frequency in a string/array
