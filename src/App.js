@@ -13,6 +13,8 @@ import APIDemo from './components/reactBasics/ApiDemo.jsx';
 import Calculator from './components/reactBasics/Statecomp.jsx';
 import EveneChange from './components/reactBasics/InputEvent.jsx';
 import UseReducer from './components/reactBasics/useReducer.jsx';
+import Forms from './components/reactBasics/Forms.jsx';
+import CustomeHook from './components/reactBasics/CustomeHook.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css' //it will support all the other components
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { useReducer } from 'react';
@@ -47,6 +49,8 @@ function Routerfun() {
         <Route path="/Movie" element={<Movie/>}></Route>
         <Route path="/Debounce" element={<Debounce />}></Route>
         <Route path="/UseReducer" element={<UseReducer />}></Route>
+        <Route path="/Forms" element={<Forms />}></Route>
+        <Route path="/CustomeHook" element={<CustomeHook />}></Route>
       </Routes>
     </BrowserRouter>
   </div>)
