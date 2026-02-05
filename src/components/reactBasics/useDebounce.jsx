@@ -11,17 +11,16 @@ const Debounce = () => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(data => setAPIData(data));
-            setLoading(false);
+        setLoading(false);
     }
 
     useEffect(() => {
         if (inputValue !== "") {
-        
-       const timer = setTimeout(() => {
-            APICall()
-        }, 3000)
-        return () => clearTimeout(timer); 
-    }
+            const timer = setTimeout(() => {
+                APICall()
+            }, 3000)
+            return () => clearTimeout(timer);
+        }
     }, [inputValue])
 
     console.log(APIData)

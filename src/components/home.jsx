@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export const HomePageComp = () => {
 
     const navgate = useNavigate();
-    const list = ['TodoList','APIDemo', 'Calculator', 'Classcomp', 'Eventchange', 'Movie', 'Debounce', 'UseReducer', 'PromisesAsyncAwait', 'EHome', 'Ecart', 'Forms', 'CustomeHook'];
+    const list = ['TodoList','APIDemo', 'Calculator', 'Classcomp', 'Eventchange', 'Movie', 'Debounce', 'UseReducer', 'PromisesAsyncAwait', 'EHome', 'Ecart', 'Forms', 'CustomeHook', 'TypeScript'];
 
     const handlerRecirect = (item) =>{
         navgate(`/${item}`)

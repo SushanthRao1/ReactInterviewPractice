@@ -8,13 +8,14 @@ import EcommerceHome from '../src/components/eCommerce/EHome.jsx';
 import Ecart from '../src/components/reduxEcommerce/ecomponent/EcommerceHome.jsx';
 import PromisesAsyncAwait from'../src/components/reactBasics/PromisesAsyncAwait';
 import Movie from './components/reactBasics/Funcomp.jsx';
-import Debounce from './components/reactBasics/useStateHK.jsx';
+import Debounce from './components/reactBasics/useDebounce.jsx';
 import APIDemo from './components/reactBasics/ApiDemo.jsx';
 import Calculator from './components/reactBasics/Statecomp.jsx';
 import EveneChange from './components/reactBasics/InputEvent.jsx';
 import UseReducer from './components/reactBasics/useReducer.jsx';
 import Forms from './components/reactBasics/Forms.jsx';
 import CustomeHook from './components/reactBasics/CustomeHook.jsx';
+import TypeScript from './TypeScript/Basics.ts';
 import 'bootstrap/dist/css/bootstrap.min.css' //it will support all the other components
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import { useReducer } from 'react';
@@ -51,6 +52,7 @@ function Routerfun() {
         <Route path="/UseReducer" element={<UseReducer />}></Route>
         <Route path="/Forms" element={<Forms />}></Route>
         <Route path="/CustomeHook" element={<CustomeHook />}></Route>
+        <Route path="/TypeScript" element={<TypeScript />}></Route>
       </Routes>
     </BrowserRouter>
   </div>)

@@ -8,6 +8,29 @@ Promise.resolve()
     .then(() => console.log('C'));
 
 
+///
+console.log('Start');
+
+setTimeout(() => {
+    console.log('Timeout 1');
+
+    Promise.resolve().then(() => {
+        console.log('Promise 1 inside Timeout');
+    });
+
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log('Promise 2');
+
+    setTimeout(() => {
+        console.log('Timeout 2 inside Promise');
+    }, 0);
+});
+
+console.log('End');
+
+
 //2.
 function foo() {
     return Promise.resolve("P");

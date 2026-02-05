@@ -27,6 +27,18 @@ obj.arrow();
 // Ans: JS undefined // exp: Arrow functions capture this lexically from their surrounding scope, bind() has no effect on them.
 
 
+const obj1 = {
+  name: 'Alice',
+  greet: function() {
+    console.log(this.name);
+  }
+};
+
+const greetFn = obj1.greet;
+greetFn();
+
+
+
 //3.
 const o = Object.create(null); 
 console.log(typeof o.toString);
