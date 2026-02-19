@@ -1,4 +1,180 @@
-//1.
+
+// Check palindrome
+// Anagram check
+// Group by property
+// Sort array of objects
+// Merge two arrays without duplicates
+// Deep clone object
+// Find missing number// 
+//   Fibonacci series (iterative and recursive)
+//   Remove duplicates from an array or Array of object with some Key as unique (using loop or filter method)
+//    Input: [1, 2, 2, 3, 4, 4]
+//    Output: [1, 2, 3, 4]
+//   Split an array into chunks of fixed size (dynamic UI)
+//     Input: chunk([1, 2, 3, 4, 5], 2)
+//     Output: [[1, 2], [3, 4], [5]]
+//   Find the first non-repeating character in a string
+//     Input: "aabbcddee"
+//     Output: "c"
+// Implement debounce function (commonly asked with search input use case)
+// memoization utility to cache results of a pure function
+
+
+
+
+
+// Loop based questions to practice daily.
+// 1. Remove duplicates from a string while preserving order.
+// 2. Find the largest number in an array
+// 3. Reverse a string using a loop.
+// 4. Capitalize the first letter of each word in a string.
+// 5.  Return the frequency of unique characters in a string (duplicates counted once).
+
+
+// **
+// Find the Nth largest number in an array (handle duplicates).
+// Find the sum of all numbers in an array.
+
+
+
+// Remove Duplicates from Array of Objects
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 1, name: "Alice" },
+  { id: 3, name: "Charlie" },
+  { id: 2, name: "Bob" }
+];
+
+
+const uniqueUsers = users.reduce((acc, current) => {
+  if (!acc.some(user => user.id === current.id)) {
+    acc.push(current);
+  }
+  return acc;
+}, []);
+
+console.log(uniqueUsers);
+
+
+//find the largest
+
+const name = [1,2,3,5,8,4,5,'s','s'];
+
+function findCount(name){
+  let count = {};
+  for(let char of name){
+  count[char] = (count[char] || 0)+1;
+  }
+  return count;
+}
+
+console.log(findCount(name))
+
+// removeDup
+
+const value = [1,2,2,4,5,5];
+
+function removeDup(value){
+  let unique ="";
+  for(let val of value){
+    if(!unique.includes(val)){
+      unique += val
+    }
+  
+}
+  return unique;
+};
+
+console.log(removeDup(value))
+
+
+
+const number3 = [1,2,5,8,9,10];
+function largestNum(arr) {
+  let largestVal = -Infinity;
+
+  for (let num of arr) {
+    if (num > largestVal) {
+      largestVal = num;
+    }
+  }
+
+  return largestVal;
+}
+
+console.log(largestNum(number3));
+
+
+function nthLargest(arr, n) {
+  let tempArr = [...arr];
+
+  for (let i = 1; i < n; i++) {
+    let max = tempArr[0];
+    let maxIndex = 0;
+
+    for (let j = 1; j < tempArr.length; j++) {
+      if (tempArr[j] > max) {
+        max = tempArr[j];
+        maxIndex = j;
+      }
+    }
+
+    tempArr.splice(maxIndex, 1);
+  }
+
+  // find max again
+  let max = tempArr[0];
+  for (let i = 1; i < tempArr.length; i++) {
+    if (tempArr[i] > max) {
+      max = tempArr[i];
+    }
+  }
+
+  return max;
+}
+
+
+console.log(nthLargest([3, 5, 1, 8, 2], 2));
+
+
+
+const name = [1,2,4,4,5,5];
+
+function charOccurance(name) {
+  
+  let charVal = {}
+
+   for (let char of name) {
+    charVal[char] = (charVal[char] || 0) + 1;
+  }
+  
+
+  return charVal;
+}
+
+console.log(charOccurance(name));
+
+
+const name1 = 'programming';
+
+function removeDup(name) {
+  let unique = {};
+  let result = "";
+
+  for (let char of name) {
+    if (!unique[char]) {
+      unique[char] = true;
+      result += char;
+    }
+  }
+
+  return result;
+}
+
+console.log( removeDup(name1))
+
+
 for (let i = 0; i < 3; i++) {
     let i = 'inner';
     console.log(i);

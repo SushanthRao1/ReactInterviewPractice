@@ -1,3 +1,25 @@
+const P1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('API is resolve'), 1000 )
+});
+
+const P2 = new Promise((resolve, reject) => {
+    setTimeout(() =>  reject('API is failed'), 2000 )
+})
+
+
+const P3 = new Promise((resolve, reject) => {
+    setTimeout(() =>  resolve('API resolved late'), 3000 )
+})
+
+
+Promise.race([P1,P2, P3])
+    .then((result) => {
+        console.log("all results:", result)
+    })
+    .catch((error) => {
+        console.log('ErrorMessage', error)
+    });
+
 //1. promises
 Promise.resolve()
     .then(() => {
@@ -58,3 +80,25 @@ Promise.resolve(1)
     .then(console.log);
 console.log(7)
 
+
+//4.
+Promise.resolve(10)
+    .finally(() => { throw new Error("boom"); })
+    .then(console.log)
+    .catch(err => console.log(err.message));
+
+Promise.resolve(10)
+    .finally(() => console.log(6))
+    .then(console.log);
+
+
+//
+const fun = () => {
+ try {
+ return 1;
+ } finally {
+ return 3;
+ }
+};
+
+console.log(fun());

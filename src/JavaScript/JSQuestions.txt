@@ -1,15 +1,38 @@
-especially React and JavaScript.
-Some of the questions asked:
-Difference between useEffect and useLayoutEffect
-How does Redux work internally?
-How do you share data globally in React?
-What is React Suspense and where is it used?
-How do you optimize a React application?
-Difference between debouncing and throttling
-Event bubbling vs event capturing
-Difference between setTimeout and setInterval
-Inline vs block elements
-JavaScript coding questions:
-Reverse a string
-Check if a string/sentence is a palindrome
-Count character frequency in a string/array
+Today to learn:
+
+Find the nth largest number in array - 30mins
+
+deep dive into call, apply, bind - 30mins
+implement Debounce, throttle, pageNation, - 1hr
+ check on currying and recursion - 1hr
+write Unit test cases in jest - 1hr
+Event bubbling vs event capturing - 30mins
+Inline vs block elements - 30mins
+Have a look into Redux flow -30mins
+Address nested object update program - 30mins 
+Remove Duplicates from Array of Objects - 30mins
+Split an array into chunks of fixed size (dynamic UI) - 30mins
+https://www.youtube.com/watch?v=szXMBGKGTdE 
+https://www.youtube.com/watch?v=QQNjidzLZ8E 
+create a input field in RJ, and show error message if value leessthan 18 - 30mins
+
+TypeScript basics: - 1hr
+
+
+
+
+
+
+
+CallbackFunctions:
+function announce(callback){
+  let useName = 'Sushath';
+  return callback(useName); // return what the callback returns
+};
+
+function greet(name){
+   return "Hello, " + name;
+}
+
+console.log(announce(greet)); 
+// Output: Hello, Sushath
